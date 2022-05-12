@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="/css/style.min.css">
 
     <title>Hello Hugo</title>
+    
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [["$", "$"]],
+    },
+    displayMath: [
+      ["$$", "$$"],
+      ["\[\[", "\]\]"],
+    ],
+    svg: {
+      fontCache: "global",
+    },
+  };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+
 </head>
 <body><header id="banner">
     <h2><a href="https://wolfyzhang.tech/">wolfyzhang&#39;s HomePage</a></h2>
@@ -90,19 +112,8 @@
 </tbody>
 </table>
 <p>公式字符：
-$$
-\begin{Bmatrix}
-a &amp; b \
-c &amp; d
-\end{Bmatrix}
-$$
-$$
-\begin{CD}
-A @&gt;a&raquo; B \
-@VbVV @AAcA \
-C @= D
-\end{CD}
-$$</p>
+When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are:</p>
+<p>$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$</p>
 </article>
 
         </main><footer id="footer">

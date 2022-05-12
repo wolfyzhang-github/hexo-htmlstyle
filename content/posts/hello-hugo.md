@@ -2,6 +2,7 @@
 title: "Hello Hugo"
 date: 2022-05-12T21:21:28+08:00
 draft: true
+math: true
 ---
 
 # 一级标题
@@ -64,16 +65,6 @@ int main () {
 | 单元格 | 单元格 | 单元格 |
 
 公式字符：
-$$
-\begin{Bmatrix}
-   a & b \\
-   c & d
-\end{Bmatrix}
-$$
-$$
-\begin{CD}
-   A @>a>> B \\
-@VbVV @AAcA \\
-   C @= D
-\end{CD}
-$$
+When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are:
+
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$

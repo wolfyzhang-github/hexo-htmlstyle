@@ -83,19 +83,8 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;公式字符：
-$$
-\begin{Bmatrix}
-a &amp;amp; b \
-c &amp;amp; d
-\end{Bmatrix}
-$$
-$$
-\begin{CD}
-A @&amp;gt;a&amp;raquo; B \
-@VbVV @AAcA \
-C @= D
-\end{CD}
-$$&lt;/p&gt;
+When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are:&lt;/p&gt;
+&lt;p&gt;$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$&lt;/p&gt;
 </description>
     </item>
     
