@@ -1,9 +1,12 @@
-name: hugo Deploy
+name: Deploy to Azure
 
 on:
    push:
      branches:
        - master  # 这里是提交到master分支就立即触发job
+     paths-ignore: # 下列文件的变更不触发部署，可以自行添加
+       - '.gitignore'
+
    pull_request:
 
 jobs:
@@ -20,7 +23,7 @@ jobs:
          with:
            hugo-version: '0.98.0'
            
-       - name: theme
+       - name: Get theme
          run: git submodule add https://github.com/wolfyzhang-github/my-etch themes/my-etch
 
        - name: Build
