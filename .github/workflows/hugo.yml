@@ -1,0 +1,33 @@
+name: hugo Deploy
+
+on:
+   push:
+     branches:
+       - master  # 这里是提交到master分支就立即触发job
+   pull_request:
+
+jobs:
+   deploy:
+     runs-on: ubuntu-20.04
+     steps:
+       - uses: actions/checkout@v2
+         with:
+           submodules: true  # Fetch Hugo themes (true OR recursive)
+           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+       - name: Setup Hugo
+         uses: peaceiris/actions-hugo@v2
+         with:
+           hugo-version: '0.98.0'
+
+       - name: Build
+         run: hugo --minify
+  
+       - name: Deploy Azure StableEnv
+         uses: wlixcc/SFTP-Deploy-Action@v1.2.1 
+         with:  
+           username: 'wolfyzhang'   #ssh user name
+           server: '${{ secrets.STABLEENV }}' #引用之前创建好的secret
+           ssh_private_key: ${{ secrets.STABLEENV_KEY }} #引用之前创建好的secret
+           local_path: './public/*'  # 对应我们项目public的文件夹路径
+           remote_path: '/home/wolfyzhang/wolfyzhang.tech/public' # 对应云上的目录
