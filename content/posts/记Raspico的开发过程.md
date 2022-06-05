@@ -1,7 +1,6 @@
 ---
 title: "记Raspico的开发过程"
 date: 2021-11-07T18:00:27+08:00
-draft: true
 ---
 
 # 前置背景
