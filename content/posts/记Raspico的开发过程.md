@@ -108,7 +108,7 @@ OpenOCD命令可以直接地、反复地烧录，你全程不必要去碰开发�
 
 # 全家福
 
-<img src="https://dev.azure.com/GhZhang/7555adf3-d88c-428a-b674-9622fd633f8b/_apis/git/repositories/b4894a8f-1d8d-43ad-84aa-d5ec8748e71b/items?path=%2F1652622379264_1842.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0" alt="IMG_20211107_150141" style="zoom:50%;" />
+![IMG_20211107_150141](https://dev.azure.com/GhZhang/7555adf3-d88c-428a-b674-9622fd633f8b/_apis/git/repositories/b4894a8f-1d8d-43ad-84aa-d5ec8748e71b/items?path=%2F1652622379264_1842.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0)
 
 我本来还有个Rpi第三方外壳，配合有风扇，我把风扇从里面掏出来，放到侧面来散热。注意过程中一些比如Rpi GPIO接口之类数据的测量和布局，所谓机电不分家嘛，何况电又有硬件和软件呢。
 
