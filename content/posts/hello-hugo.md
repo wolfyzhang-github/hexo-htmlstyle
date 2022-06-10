@@ -1,7 +1,6 @@
 ---
 title: "Hello Hugo"
 date: 2022-05-12T21:21:28+08:00
-draft: true
 math: true
 ---
 
