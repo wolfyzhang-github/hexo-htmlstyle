@@ -1,0 +1,14 @@
+<header>
+    <div class="header-container">
+        <div class="header-menu">
+            <div class="header-menu-inside">
+                <% for(let i in theme.home) { %>
+                    <div class="header-menu-home"><a href="<%- url_for(theme.home[i]) %>"><%= i %></a></div>
+                <% } %>
+                <% for(let j in theme.about) { %>
+                    <div class="header-menu-about"><a href="<%- url_for(theme.about[j]) %>"><%= j %></a></div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</header>
