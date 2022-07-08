@@ -103,5 +103,6 @@ theme: htmlStyle
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
-
+  type: git
+  repo: https://github.com/wolfyzhang-github/wolfyzhang-github.github.io
+  branch: main
