@@ -10,10 +10,12 @@ updated:
 
 高中一个月回家半天，没有继续研究的条件，不过学校提倡每天写几百字的心灵日志，三年下来可能写了三十多万字，我也逐渐养成了面对生活中某些问题延展开思考一下然后写点东西的习惯。
 
-本科学的电信专业，了解了一些单片机、嵌入式等偏向于硬件的知识，侧面帮助了我了解计算机系统。
+本科学的电信专业，了解了一些单片机、嵌入式等偏向于硬件的知识，侧面帮助了我了解计算机系统。说句比较中二的话，我的目标是可以看着一块开机主板的同时脑补出它内部发生着的一切。
 
 目前在准备考研，理想方向是计算机体系结构。
 
 Email: wolfyzhang(at)outlook(dot)com
+fanfou: [@wolfyzhang](https://fanfou.com/wolfyzhang)
 zhihu: [@wolfyzhang](https://www.zhihu.com/people/wolfy-12)
 GitHub：[@wolfyzhang-github](https://github.com/wolfyzhang-github)
+twitter: [@wolfyzhang](https://twitter.com/wolfyzhang)
