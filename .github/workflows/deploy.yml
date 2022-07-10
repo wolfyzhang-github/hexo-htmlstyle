@@ -38,7 +38,7 @@ jobs:
 
       - name: Configuration environment
         env:
-          HEXO_DEPLOY_PRI: ${{secrets.deplay_key}}
+          deplay_key: ${{secrets.deplay_key}}
         run: |
           sudo timedatectl set-timezone "Asia/Shanghai"
           mkdir -p ~/.ssh/
@@ -50,10 +50,9 @@ jobs:
 
       - name: Install dependencies
         run: |
+          npm install -g hexo-cli
           npm install
-          npm install hexo
 
       - name: Deploy hexo
         run: |
-          npx hexo clean
-          npx hexo deplay
+          hexo clean && hexo generate && hexo deplay
