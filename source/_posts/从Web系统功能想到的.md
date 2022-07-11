@@ -2,8 +2,8 @@
 title: 从Web系统功能想到的
 date: 2022-06-04 01:40:30
 updated: 2022-06-04 01:40:30
+twitter: true
 ---
-> 整理自 Twitter
 
 所谓的「web前后端」系统，一言以蔽之：浏览器里的JavaScript调一些HTTP API，与同样调HTTP API的服务器后端进程通信，这个后端用什么语言无所谓，有运行环境就可以。
 
