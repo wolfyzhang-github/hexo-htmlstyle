@@ -102,7 +102,11 @@ theme: htmlStyle
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: git@github.com:wolfyzhang-github/wolfyzhang-github.github.io.git
-  branch: main
+#deploy:
+#  type: git
+#  repo: git@github.com:wolfyzhang-github/wolfyzhang-github.github.io.git
+#  branch: main
+
+analytics:
+  enable: true
+  gtag: G-P8TPGHN83M
