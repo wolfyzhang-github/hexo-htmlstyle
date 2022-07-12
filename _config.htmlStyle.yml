@@ -25,3 +25,7 @@ mathjax:
 katex:
   enable: true
   cdn: https://cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css
+
+analytics:
+  enable: true
+  gtag: G-P8TPGHN83M
