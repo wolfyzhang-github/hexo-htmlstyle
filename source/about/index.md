@@ -15,6 +15,7 @@ updated:
 目前在准备考研，具体目标院校未定，不过理想方向是计算机体系结构。
 
 Email: wolfyzhang(at)outlook(dot)com
+telegram: [@wolfyzhang](https://t.me/wolfyzhang)
 fanfou: [@wolfyzhang](https://fanfou.com/wolfyzhang)
 zhihu: [@wolfyzhang](https://www.zhihu.com/people/wolfy-12)
 GitHub：[@wolfyzhang-github](https://github.com/wolfyzhang-github)
