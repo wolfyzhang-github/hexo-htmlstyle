@@ -24,6 +24,10 @@
                         </blockquote>
                     </div>
                 <% } %>
+                <% if (page.draft) { %>
+                    <div class="draft">
+                        <p>挖坑待填......</p>
+                    </div>
                 <%- page.content %>
             </div>
         </div>
