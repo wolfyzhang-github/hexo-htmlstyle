@@ -1,8 +1,9 @@
 ---
 title: ChromeOS-Flex镜像结构及引导过程简要分析
 date: 2022-07-16 15:46:59
-updated:
-twitter:
+updated: 
+twitter: 
+pinned: true
 ---
 
 ## 背景
