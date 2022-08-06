@@ -2,7 +2,8 @@
 title: {{ title }}
 date: {{ date }}
 updated: {{ updated }}
-twitter:
+twitter: 
 draft: 
+pinned: 
 ---
 
