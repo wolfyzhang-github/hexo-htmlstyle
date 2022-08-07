@@ -9,4 +9,4 @@ twitter: true
 
 经典的东西还是有一定生命力的：
 
-![Shell截图](https://pbs.twimg.com/media/FR_syVSacAAvu7i?format=jpg)
+![Shell截图](images/shell.jpeg)
