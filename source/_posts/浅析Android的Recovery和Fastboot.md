@@ -1,6 +1,5 @@
 ---
 title: 浅析Android的Recovery和Fastboot
-draft: true
 date: 2022-07-29 23:19:58
 updated: 2022-07-30 23:19:58
 twitter: 
