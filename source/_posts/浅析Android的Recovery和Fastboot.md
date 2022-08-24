@@ -3,6 +3,7 @@ title: 浅析Android的Recovery和Fastboot
 date: 2022-07-29 23:19:58
 updated: 2022-07-30 23:19:58
 twitter: 
+pinned: true
 ---
 
 Recovery应该类似于PE系统，是一个简单但是完整的Linux，有文件系统和简单的UI，可单独引导。从硬盘分区上来看，Recovery也是和内核所在的分区隔离开的，除非用户主动进行一些修改的操作，否则内核分区没办法对Recovery分区造成影响，从而侧面达成了「当内核出问题时进Recovery进行修复」的目的。

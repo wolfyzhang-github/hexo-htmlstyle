@@ -7,9 +7,9 @@ draft:
 pinned: true
 ---
 
-书接上回，在[上次决定要「抖擞一下精神」](https://wolfyzhang-github.github.io/2022/08/16/%E5%AF%B9Chisel%E6%B5%85%E5%B0%9D%E8%BE%84%E6%AD%A2%E5%90%8E%E7%9A%84%E6%83%B3%E6%B3%95/)后，现在终于可以小小展示一下成果了：
+书接上回，在上次决定要[「抖擞一下精神」](https://wolfyzhang-github.github.io/2022/08/16/%E5%AF%B9Chisel%E6%B5%85%E5%B0%9D%E8%BE%84%E6%AD%A2%E5%90%8E%E7%9A%84%E6%83%B3%E6%B3%95/)后，现在终于可以小小展示一下成果了：
 
-![shot](images/shot.png)
+首先放上源码：https://github.com/wolfyzhang-github/Brat
 
 ![shot](images/shot_1.png)
 
@@ -41,7 +41,7 @@ long sum(long *arr, long count) {
 }
 ```
 
-由于没有y86-64版本的C语言编译器，所以我们必须手工编写对应的汇编代码，`sum.ys`内容如下：
+由于没有y86-64版本的C语言编译器，所以我们必须手工编写对应的汇编代码，`sum.ys`内容节选如下：
 
 ```assembly
 # Execution begins at address 0
@@ -52,10 +52,8 @@ long sum(long *arr, long count) {
 # Array of 4 elements
     .align 8
 array:
-    .quad 0x000d000d000d
-    .quad 0x00c000c000c0
-    .quad 0x0b000b000b00
-    .quad 0xa000a000a000
+    ......
+
 main:
     irmovq array, %rdi
     irmovq $4, %rsi
@@ -64,10 +62,8 @@ main:
 # long sum(long *start, long count)
 # start in %rdi, count in %rsi
 sum:
-    irmovq $8, %r8  # Constant 8
-    irmovq $1, %r9  # Constant 1
-    xorq %rax, %rax # sum = 0
-    andq %rsi, %rsi # Set CC
+    ......
+
     jmp test        # Goto test
 loop:
     mrmovq (%rdi), %r10 # Get *start
@@ -84,7 +80,7 @@ stack:
 
 然后我们就可以通过isa手册将上面代码进行手工汇编，将其转译成计算机可以实际运行的二进制文件`sum`。CSAPP官方提供了一个汇编器用于产生汇编代码和二进制代码一一对应的程序文本。值得指出，官方汇编器实际上是把一个ASCII码编码的文件进行处理，然后输出另一个ASCII码编码的文件，而ASCII码编码过的文本文件是不能够直接被计算机执行的（即便其内容是二进制程序），其机内码和我们可以阅读的数字不一致，我们必须再对「ASCII码编码过的二进制程序文本文件」进行处理，使用HexEditor等工具，直接写入该文件的机内码。
 
-使用该汇编器对上面的汇编代码进行处理产生的「汇编代码和二进制代码一一对应的程序文本」`sum.yo`如下：
+使用该汇编器对上面的汇编代码进行处理产生的「汇编代码和二进制代码一一对应的程序文本」`sum.yo`节选如下：
 
 ```assembly
                             | # Execution begins at address 0
@@ -92,29 +88,9 @@ stack:
 0x000: 30f40001000000000000 |     irmovq stack, %rsp  # Set stack pointer
 0x00a: 803800000000000000   |     call main
 0x013: 00                   |     halt
-                            | 
-                            | # Array of 4 elements
-0x018:                      |     .align 8
-0x018:                      | array:
-0x018: 0d000d000d000000     |     .quad 0x000d000d000d
-0x020: c000c000c0000000     |     .quad 0x00c000c000c0
-0x028: 000b000b000b0000     |     .quad 0x0b000b000b00
-0x030: 00a000a000a00000     |     .quad 0xa000a000a000
-                            | 
-0x038:                      | main:
-0x038: 30f71800000000000000 |     irmovq array, %rdi
-0x042: 30f60400000000000000 |     irmovq $4, %rsi
-0x04c: 805600000000000000   |     call sum             # sum(array, 4)
-0x055: 90                   |     ret
-                            | 
-                            | # long sum(long *start, long count)
-                            | # start in %rdi, count in %rsi
-0x056:                      | sum:
-0x056: 30f80800000000000000 |     irmovq $8, %r8  # Constant 8
-0x060: 30f90100000000000000 |     irmovq $1, %r9  # Constant 1
-0x06a: 6300                 |     xorq %rax, %rax # sum = 0
-0x06c: 6266                 |     andq %rsi, %rsi # Set CC
-0x06e: 708700000000000000   |     jmp test        # Goto test
+
+......
+
 0x077:                      | loop:
 0x077: 50a70000000000000000 |     mrmovq (%rdi), %r10 # Get *start
 0x081: 60a0                 |     addq %r10, %rax     # add to sum
@@ -159,6 +135,8 @@ for (int i = 0; ; ++i) {
 assembler则只是对官方汇编器产生的「汇编代码和二进制代码一一对应的程序文本」进行字符处理，直接输出ASCII码编码的二进制程序文本。
 
 我实现的这套东西本身是y86-64 SEQ CPU的辅助工具，或者说是脚手架，是基础设施，而这套东西本身又有它们自己的辅助工具，比如yie的测试脚本和Makefile组成的「编译系统」等。基础设施是对整个产品生产过程中所遇到问题的一整套解决方案，它的价值不仅体现在它能解决当下的这一个具体问题，更体现在它背后所代表的那一套可以推而广之的对问题的解决机制上。
+
+*** 
 
 项目上暂时告一段落，今年接下来的几个月就安心准备考研。
 
