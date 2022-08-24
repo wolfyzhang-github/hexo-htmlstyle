@@ -1,7 +1,7 @@
 ---
 title: 关于chisel的一些想法
 date: 2022-08-16 23:46:24
-updated: 2022-08-16 23:46:24
+updated: 2022-08-24 23:46:24
 pinned: true
 ---
 
