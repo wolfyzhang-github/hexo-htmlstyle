@@ -7,7 +7,7 @@ draft:
 pinned: true
 ---
 
-书接上回，在上次决定要[「抖擞一下精神」](https://wolfyzhang-github.github.io/2022/08/16/%E5%AF%B9Chisel%E6%B5%85%E5%B0%9D%E8%BE%84%E6%AD%A2%E5%90%8E%E7%9A%84%E6%83%B3%E6%B3%95/)后，现在终于可以小小展示一下成果了：
+书接上回，在上次决定要[「抖擞一下精神」](https://blog.wolfyzhang.com/2022/08/16/%E5%85%B3%E4%BA%8Echisel%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/)后，现在终于可以小小展示一下成果了：
 
 首先放上源码：https://github.com/wolfyzhang-github/Brat
 
