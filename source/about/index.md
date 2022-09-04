@@ -14,7 +14,9 @@ updated:
 
 目前在准备考研，具体目标院校未定，不过理想方向是Computer Architecture。
 
-Email: wolfyzhang(at)outlook(dot)com
+最近心态不佳。
+
+Email: i(at)wolfyzhang(dot)com
 telegram: [@wolfyzhang](https://t.me/wolfyzhang)
 fanfou: [@wolfyzhang](https://fanfou.com/wolfyzhang)
 zhihu: [@wolfyzhang](https://www.zhihu.com/people/wolfy-12)
