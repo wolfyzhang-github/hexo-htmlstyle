@@ -16,6 +16,18 @@
                 </span>
             </div>
             <% } %>
+            <% if (is_page()) { %>
+                <div class="post-meta">
+                    <i class="fa-solid fa-clock"></i>&nbsp;
+                    <span class="post-date">
+                        <%= date(page.date, 'YYYY/MM/DD') %>
+                    </span>&nbsp;&nbsp;
+                    <i class="fa-solid fa-calendar-lines-pen"></i>&nbsp;
+                    <span class="post-updated">
+                        <%= date(page.updated, 'YYYY/MM/DD') %>
+                    </span>
+                </div>
+                <% } %>
             <div class="post-content">
                 <% if (page.twitter) { %>
                     <div class="from-twitter">
