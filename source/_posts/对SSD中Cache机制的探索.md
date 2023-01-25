@@ -13,7 +13,7 @@ id: exploration-of-Cache-Mechanism-in-SSD
 
 从[官方文档](https://www.samsung.com/cn/memory-storage/nvme-ssd/970-evo-plus-nvme-m-2-2tb-mz-v7s2t0bw/)上我们可以获取到如下有效信息：
 
-| **字段** | **属性**                   |
+| **Field** | **Detail**                   |
 | -------- | -------------------------- |
 | 接口     | PCIe Gen 3.0 x4, NVMe 1.3  |
 | NAND闪存 | 三星 V-NAND 3-bit MLC      |
