@@ -2,9 +2,9 @@
 title: 对SSD中Cache机制的探索
 date: 2022-08-06 21:12:55
 updated: 2022-08-07 21:12:55
-twitter: 
 draft: 
 pinned: true
+permalink: exploration-of-Cache-Mechanism-in-SSD
 ---
 
 很偶然的机会，听群友们讨论到「企业级SSD上的电容当电池用，来给突然断电时的缓存供电」，SSD里原来也有断电易失的RAM？这引起了我的兴趣，探索了一番，将研究思路和结论记录如下。

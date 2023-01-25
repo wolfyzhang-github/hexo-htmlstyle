@@ -2,6 +2,7 @@
 title: about
 date: 2022-07-08 23:40:05
 updated:
+permalink: about
 ---
 
 <div style="width:98%; height:98%; margin: 0 auto;">

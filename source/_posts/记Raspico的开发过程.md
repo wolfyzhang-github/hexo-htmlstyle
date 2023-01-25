@@ -2,7 +2,7 @@
 title: 记Raspico的开发过程
 date: 2021-11-07 18:00:27
 updated: 2022-08-09 18:00:27
-
+permalink: record-the-development-process-of-Raspico
 ---
 
 # （一）v0.1.0 的开发过程
