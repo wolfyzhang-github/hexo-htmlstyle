@@ -2,7 +2,7 @@
 title: {{ title }}
 date: {{ date }}
 updated: {{ updated }}
-permalink: 
+id: 
 draft: 
 pinned: 
 ---
