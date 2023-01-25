@@ -18,4 +18,3 @@ Fastboot本身应该不是一个完整的操作系统，我更倾向于它是一
 
 BootLoader的功能就很稀松平常了，无非就是boot负责设备硬件初始化（CPU Clock和Register之类）,Loader负责系统（Recovery或Android）的引导。
 
-*有了计算机系统视角以后看这些具体的工具确实是降维打击了。*
