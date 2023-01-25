@@ -6,7 +6,7 @@ permalink: about
 ---
 
 <div style="width:98%; height:98%; margin: 0 auto;">
-    <img src="index/images/photo-large.jpg">
+    <img src="about/images/photo-large.jpg">
 </div>
 
 <p style="text-align:center; color:dimgrey; font-size:15px;">唯一一张人模狗样的照片</p>
