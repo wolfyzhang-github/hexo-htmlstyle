@@ -58,7 +58,8 @@ prismjs:
   line_number: true
   tab_replace: ''
 encrypt:
-    enable: true
+  enable: true
+  message: Password required.
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
