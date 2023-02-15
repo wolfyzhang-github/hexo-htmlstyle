@@ -57,6 +57,8 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
+encrypt:
+    enable: true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
