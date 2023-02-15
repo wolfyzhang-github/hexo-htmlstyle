@@ -1,6 +1,6 @@
 <main>
     <div class="main-container">
-        <div class="pinned-title">
+        <div class="pinned-chapter">
             Pinned
         </div>
         <div class="pinned-list">
@@ -8,12 +8,16 @@
             <% posts.forEach(post => { %>
                 <% if (post.pinned) { %>
                     <div class="pinned-item">
-                        <a href="<%- url_for(post.path) %>"><span class="pinned-item-date"><%= date(post.date, 'YYYY/MM/DD') %></span> <%- post.title %></a>
+                        <a href="<%- url_for(post.path) %>">
+                            <span class="pinned-item-date"><%= date(post.date, 'YYYY/MM/DD') %></span>
+                            <span class="pinned-item-title"><%- post.title %></span>
+                            <div class="pinned-item-abstract"><%- post.abstract %></div>
+                        </a>
                     </div>
                 <% } %>
             <% }) %>
         </div>
-        <div class="post-title">
+        <div class="post-chapter">
             TimeLine
         </div>
         <div class="post-list">
@@ -21,7 +25,11 @@
             <% posts.forEach(post => { %>
                 <% if (!post.pinned) { %>
                     <div class="post-item">
-                        <a href="<%- url_for(post.path) %>"><span class="post-item-date"><%= date(post.date, 'YYYY/MM/DD') %></span> <%- post.title %></a>
+                        <a href="<%- url_for(post.path) %>">
+                            <span class="post-item-date"><%= date(post.date, 'YYYY/MM/DD') %></span>
+                            <span class="post-item-title"><%- post.title %></span>
+                            <div class="post-item-abstract"><%- post.abstract %></div>
+                        </a>
                     </div>
                 <% } %>
             <% }) %>
