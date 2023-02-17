@@ -60,6 +60,7 @@ prismjs:
 encrypt:
   enable: true
   message: Password required.
+  theme: Flip
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
