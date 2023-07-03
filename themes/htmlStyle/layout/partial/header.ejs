@@ -5,8 +5,11 @@
                 <% for(let i in theme.home) { %>
                     <div class="header-menu-home"><a href="<%- url_for(theme.home[i]) %>"><%= i %></a></div>
                 <% } %>
-                <% for(let j in theme.about) { %>
-                    <div class="header-menu-about"><a href="<%- url_for(theme.about[j]) %>"><%= j %></a></div>
+                <% for(let j in theme.links) { %>
+                    <div class="header-menu-links"><a href="<%- url_for(theme.links[j]) %>"><%= j %></a></div>
+                <% } %>
+                <% for(let k in theme.about) { %>
+                    <div class="header-menu-about"><a href="<%- url_for(theme.about[k]) %>"><%= k %></a></div>
                 <% } %>
             </div>
         </div>

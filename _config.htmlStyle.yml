@@ -1,6 +1,9 @@
 home:
   Home: /
 
+links:
+  Links: links
+
 about:
   About: about
 
