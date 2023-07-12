@@ -1,4 +1,4 @@
-<% if (theme.analytics && theme.analytics.enable) { %> 
+<% if (theme.analytics && theme.analytics.genable) { %> 
     <% if (theme.analytics.gtag) { %>
         <script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.analytics.gtag %>"></script>
         <script>
@@ -6,6 +6,20 @@
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '<%= theme.analytics.gtag %>');
+        </script>
+    <% } %>
+<% } %>
+
+<% if (theme.analytics && theme.analytics.benable) { %> 
+    <% if (theme.analytics.btag) { %>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?<%= theme.analytics.btag %>";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
         </script>
     <% } %>
 <% } %>

@@ -30,5 +30,7 @@ katex:
   cdn: https://cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css
 
 analytics:
-  enable: true
+  genable: true
+  benable: true
   gtag: G-P8TPGHN83M
+  btag: 814574df4ca5d3c5a44b815c9ad229ef
