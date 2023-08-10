@@ -18,4 +18,4 @@ package.json
 package-lock.json       - 依赖等
 ```
 
-有部分涉及个人信息的内容我作了处理，当然你可以简单地绕过，但请注意，资源路径下的原创文字及图片内容采用 [CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 授权协议。
+资源路径下的原创文字及图片内容采用 [CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 授权协议。
