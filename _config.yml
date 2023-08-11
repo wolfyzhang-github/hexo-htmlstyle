@@ -111,3 +111,10 @@ deploy:
   type: git
   repo: git@github.com:wolfyzhang-github/wolfyzhang-github.github.io.git
   branch: main
+
+lazyload:
+  enable: true
+  onlypost: false # optional
+  loadingImg: # optional eg ./images/loading.gif
+  isSPA: false # optional
+  preloadRatio: 1 # optional, default is 1
