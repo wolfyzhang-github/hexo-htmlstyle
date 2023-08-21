@@ -11,8 +11,8 @@
                         <a href="<%- url_for(post.path) %>">
                             <span class="pinned-item-date"><%= date(post.date, 'YYYY/MM/DD') %></span>
                             <span class="pinned-item-title"><%- post.title %></span>
-                            <div class="pinned-item-abstract"><%- post.abstract %></div>
                         </a>
+                        <div class="pinned-item-abstract"><%- post.abstract %></div>
                     </div>
                 <% } %>
             <% }) %>
@@ -28,8 +28,8 @@
                         <a href="<%- url_for(post.path) %>">
                             <span class="post-item-date"><%= date(post.date, 'YYYY/MM/DD') %></span>
                             <span class="post-item-title"><%- post.title %></span>
-                            <div class="post-item-abstract"><%- post.abstract %></div>
                         </a>
+                        <div class="post-item-abstract"><%- post.abstract %></div>
                     </div>
                 <% } %>
             <% }) %>
