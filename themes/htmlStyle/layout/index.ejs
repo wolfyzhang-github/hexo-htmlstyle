@@ -9,6 +9,7 @@
                 <% if (post.pinned) { %>
                     <div class="pinned-item">
                         <a href="<%- url_for(post.path) %>">
+                            <span class="pinned-item-key">[ <%- post.key %> ]</span>
                             <span class="pinned-item-date"><%= date(post.date, 'YYYY/MM/DD') %></span>
                             <span class="pinned-item-title"><%- post.title %></span>
                         </a>
@@ -26,6 +27,7 @@
                 <% if (!post.pinned) { %>
                     <div class="post-item">
                         <a href="<%- url_for(post.path) %>">
+                            <span class="post-item-key">[ <%- post.key %> ]</span>
                             <span class="post-item-date"><%= date(post.date, 'YYYY/MM/DD') %></span>
                             <span class="post-item-title"><%- post.title %></span>
                         </a>

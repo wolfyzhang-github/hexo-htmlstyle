@@ -7,4 +7,5 @@ pinned:
 abstract: 
 password: 
 message: 
+key: 
 ---
