@@ -34,3 +34,12 @@ analytics:
   benable: true
   gtag: G-P8TPGHN83M
   btag: 814574df4ca5d3c5a44b815c9ad229ef
+
+symbols_count_time:
+  symbols: true
+  time: false
+  total_symbols: true
+  total_time: false
+  exclude_codeblock: false
+  wpm: 275
+  suffix: "mins."

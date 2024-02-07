@@ -6,28 +6,32 @@
                 <h1><%= page.title %></h1>
             </div>
             <div class="post-meta">
-                <i>发布于</i>&nbsp;
+                <i>Published</i>&nbsp;
                 <span class="post-date">
                     <%= date(page.date, 'YYYY/MM/DD') %>
                 </span>&nbsp;&nbsp;
-                <i>更新于</i>&nbsp;
+                <i>Updated</i>&nbsp;
                 <span class="post-updated">
                     <%= date(page.updated, 'YYYY/MM/DD') %>
-                </span>
+                </span>&nbsp;&nbsp;
+                <i>Words</i>&nbsp;
+                <span class="post-updated">
+                    <%- symbolsCount(page) %>
+                </span>&nbsp;&nbsp;
             </div>
             <% } %>
             <% if (is_page()) { %>
                 <div class="post-meta">
-                    <i>发布于</i>&nbsp;
+                    <i>Published</i>&nbsp;
                     <span class="post-date">
                         <%= date(page.date, 'YYYY/MM/DD') %>
                     </span>&nbsp;&nbsp;
-                    <i>更新于</i>&nbsp;
+                    <i>Updated</i>&nbsp;
                     <span class="post-updated">
                         <%= date(page.updated, 'YYYY/MM/DD') %>
                     </span>
                 </div>
-                <% } %>
+            <% } %>
             <div class="post-content">
                 <%- page.content %>
             </div>

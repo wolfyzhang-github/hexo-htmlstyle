@@ -1,6 +1,9 @@
 <footer>
     <div class="footer-container">
         <div class="footer-meta">
+            <div class="footer-meta-symbols-count">
+                All words count: <%- symbolsCountTotal(site) %>
+            </div>
             <% if (theme.copyright) { %>
                 <div class="footer-meta-copyright">
                     &copy; 2020-<%= date(new Date(), 'YYYY') %> <%= theme.copyright.name || config.author %>.
@@ -8,7 +11,7 @@
             <% } %>
             <% if (theme.license) { %>
                 <div class="footer-meta-licenese">
-                    Licensed <a href="<%- url_for(theme.license.url) %>"><%= theme.license.name %></a>
+                    Licensed under <a href="<%- url_for(theme.license.url) %>"><%= theme.license.name %></a>
                 </div>
             <% } %>
         </div>
