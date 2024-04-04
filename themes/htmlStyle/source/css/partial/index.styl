@@ -23,7 +23,6 @@
         margin-bottom: 10px
 
 .pinned-item-key, .post-item-key
-    font-weight: bold
     font-size: 1em
 
 .pinned-item-date, .post-item-date
@@ -31,11 +30,18 @@
     color: #555
     margin-left: 0.5em
 
-.pinned-item-title, .post-item-title
-    font-size: 1em
-    margin-left: 0.4em
-    color: #3A97FF
+.pinned-item-title, .post-item-title {
+    font-size: 1em;
+    margin-left: 0.4em;
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* 平滑过渡效果 */
+}
 
+.pinned-item-title:hover, .post-item-title:hover {
+    color: #005fa3;
+    text-decoration: underline;
+}
 .pinned-item-abstract, .post-item-abstract
     font-size: 0.8em
     color: #555
