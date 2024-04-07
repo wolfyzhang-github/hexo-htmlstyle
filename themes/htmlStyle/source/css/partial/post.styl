@@ -3,10 +3,13 @@
     margin: 0 10px 0 10px
     inline-height: 1.8em
     a:not(.nonstyle)
+        transition: color 0.3s ease, text-decoration 0.3s ease; /* 平滑过渡效果 */
         text-decoration: none
-        color: #3A97FF
+        color: #0077CC
         &:hover
-            box-shadow: 0 1px 0 #3A97FF
+            color: #005fa3;
+            text-decoration: underline;
+
     .post-title
         margin: 0 10px 0 0
         margin-bottom: 10px
