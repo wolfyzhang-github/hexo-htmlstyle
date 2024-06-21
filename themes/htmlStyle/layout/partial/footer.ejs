@@ -18,4 +18,17 @@
             -->
         </div>
     </div>
+    <script>
+        function applyNightMode() {
+          const isNightMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (isNightMode) {
+            document.body.classList.add('night-mode');
+          } else {
+            document.body.classList.remove('night-mode');
+          }
+        }
+      
+        applyNightMode();
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyNightMode);
+      </script>      
 </footer>
