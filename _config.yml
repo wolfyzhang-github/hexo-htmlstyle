@@ -118,3 +118,11 @@ lazyload:
   loadingImg: # optional eg ./images/loading.gif
   isSPA: false # optional
   preloadRatio: 1 # optional, default is 1
+
+minifier:
+  js:
+    enable: true
+  css:
+    enable: true
+  html:
+    enable: true
