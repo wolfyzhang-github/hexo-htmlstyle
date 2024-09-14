@@ -1,0 +1,50 @@
+.sticky-nav
+    position: sticky
+    top: 0
+    background: rgba(255, 255, 255, 0.7)  // 增加透明度
+    backdrop-filter: blur(10px)  // 增加模糊效果
+    padding: 15px 0
+    z-index: 1000
+    transition: box-shadow 0.3s ease, background-color 0.3s ease
+    display: flex
+    align-items: center
+
+    &.scrolled
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+        background-color: rgba(255, 255, 255, 0.85)  // 滚动时稍微增加不透明度
+
+.nav-content
+    width: 100%
+    max-width: 640px
+    margin: 0 auto
+    padding: 0
+    display: flex
+    align-items: center
+
+.breadcrumb
+    display: flex
+    align-items: center
+
+.home-link
+    display: flex
+    align-items: center
+    color: #0077cc
+    text-decoration: none
+    transition: color 0.3s ease
+
+    &:hover
+        color: #005fa3
+        text-decoration: underline
+
+.home-icon
+    width: 16px
+    height: 16px
+    margin-right: 5px
+    background-image: url('/favicon.ico')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+
+.chevron
+    margin-left: 8px
+    color: var(--chevron-color)

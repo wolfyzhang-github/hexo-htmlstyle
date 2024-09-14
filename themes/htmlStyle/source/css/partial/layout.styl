@@ -1,7 +1,14 @@
 .body-container
     margin: 0 auto
-    max-width: 680px
     display: flex
     flex-direction: column
+    align-items: center  // 添加此行以居中子元素
+    max-width: 100%  // 添加这行
+    overflow-x: hidden  // 添加这行
     & > div:not(:last-child)
         margin-bottom: 20px
+
+.main-wrapper, .footer-wrapper
+    width: 100%
+    max-width: 640px  // 设置最大宽度
+    padding: 0 10px  // 添加左右内边距

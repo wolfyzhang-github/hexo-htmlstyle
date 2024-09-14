@@ -1,12 +1,7 @@
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="<%= url_for(theme.favicon) %>" type="image/x-icon" />
-    <link rel="preload" href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400;700&display=swap"></noscript>
-    <link rel="preconnect" href="https://fonts.loli.net">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
     <title>
         <% if (page.title) { %>
             <%= page.title %> |
@@ -14,12 +9,6 @@
         <%= config.title %>
     </title>
     <%- css('css/style') %>
-    <%- css('css/font') %>
     <%- partial('partial/scripts/analytics.ejs') %>   
-    <style>
-      /* 内联关键CSS */
-      body { font-family: 'Noto Sans SC', sans-serif; }
-      .main-container { display: flex; flex-wrap: wrap; }
-    </style>
     <meta http-equiv="Cache-Control" content="max-age=31536000">
 </head>

@@ -1,0 +1,17 @@
+<% 
+    var parts = page.path.split('/');
+    var breadcrumbs = [{name: 'Home', url: '/'}];
+    var url = '/';
+    for(var i=0; i<parts.length-1; i++) {
+        url += parts[i] + '/';
+        breadcrumbs.push({name: parts[i], url: url});
+    }
+%>
+
+<div class="breadcrumb">
+    <a href="/" class="breadcrumb-link home-link">
+        <span class="home-icon"></span>
+        <span>Home</span>
+    </a>
+    <span class="chevron">›</span>
+</div>

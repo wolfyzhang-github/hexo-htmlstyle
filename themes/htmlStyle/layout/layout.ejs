@@ -2,10 +2,30 @@
 <html>
 <%- partial('partial/head') %>
 <body>
+    <% if (is_post()) { %>
+        <%- partial('partial/post-header') %>
+    <% } %>
     <div class="body-container">
-        <div class="header-wrapper"><%- partial('partial/header') %></div>
+        <% if (!is_post()) { %>
+            <%- partial('partial/index-header') %>
+        <% } %>
         <div class="main-wrapper"><%- body %></div>
         <div class="footer-wrapper"><%- partial('partial/footer') %></div>
     </div>
 </body>
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var nav = document.querySelector('.sticky-nav');
+        var scrollThreshold = 50; // 滚动多少像素后添加背景
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > scrollThreshold) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    });
+</script>

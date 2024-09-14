@@ -1,39 +1,19 @@
 <main>
     <div class="main-container">
-        <div class="pinned-chapter">
-            Pinned
-        </div>
-        <div class="pinned-list">
-            <% var posts = site.posts.sort('date', 'desc'); %>
-            <% posts.forEach(post => { %>
-                <% if (post.pinned) { %>
-                    <div class="pinned-item">
-                        <span class="pinned-item-key">[ <%- post.key %> ]</span>
-                        <span class="pinned-item-date"><%= date(post.date, 'YYYY/MM/DD') %></span>
-                        <a href="<%- url_for(post.path) %>">
-                            <span class="pinned-item-title"><%- post.title %></span>
-                        </a>
-                        <div class="pinned-item-abstract"><%- post.abstract %></div>
-                    </div>
-                <% } %>
-            <% }) %>
-        </div>
         <div class="post-chapter">
             TimeLine
         </div>
         <div class="post-list">
             <% var posts = site.posts.sort('date', 'desc'); %>
             <% posts.forEach(post => { %>
-                <% if (!post.pinned) { %>
-                    <div class="post-item">
-                        <span class="post-item-key">[ <%- post.key %> ]</span>
-                        <span class="post-item-date"><%= date(post.date, 'YYYY/MM/DD') %></span>
-                        <a href="<%- url_for(post.path) %>">
-                            <span class="post-item-title"><%- post.title %></span>
-                        </a>
-                        <div class="post-item-abstract"><%- post.abstract %></div>
-                    </div>
-                <% } %>
+                <div class="post-item">
+                    <span class="post-item-key">[ <%- post.key %> ]</span>
+                    <span class="post-item-date"><%= date(post.date, 'YYYY/MM/DD') %></span>
+                    <a href="<%- url_for(post.path) %>">
+                        <span class="post-item-title"><%- post.title %></span>
+                    </a>
+                    <div class="post-item-abstract"><%- post.abstract %></div>
+                </div>
             <% }) %>
         </div>
     </div>
