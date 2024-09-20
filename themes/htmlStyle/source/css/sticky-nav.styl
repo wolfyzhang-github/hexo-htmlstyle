@@ -1,17 +1,18 @@
 .sticky-nav
     position: sticky
     top: 0
-    background: rgba(255, 255, 255, 0.7)  // 增加透明度
-    backdrop-filter: blur(10px)  // 增加模糊效果
-    padding: 15px 0
+    background: rgba(240, 240, 240, 0.9)  // 灰色背景，稍微透明
+    backdrop-filter: blur(10px)  // 保留模糊效果
+    padding: 20px 0
     z-index: 1000
     transition: box-shadow 0.3s ease, background-color 0.3s ease
     display: flex
     align-items: center
+    border-bottom: 1px solid #eee
 
     &.scrolled
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
-        background-color: rgba(255, 255, 255, 0.85)  // 滚动时稍微增加不透明度
+        background-color: rgba(240, 240, 240, 0.95)  // 滚动时稍微增加不透明度
 
 .nav-content
     width: 100%
@@ -20,6 +21,7 @@
     padding: 0
     display: flex
     align-items: center
+    padding: 0 20px
 
 .breadcrumb
     display: flex

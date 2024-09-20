@@ -1,17 +1,38 @@
 <main>
     <div class="main-container">
-        <div class="post-chapter">
-            TimeLine
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <% 
+            let tags = [];
+            site.posts.forEach(function(post){
+                if (post.key && post.key.length) {
+                    if (typeof post.key === 'string') {
+                        if (tags.indexOf(post.key) === -1) {
+                            tags.push(post.key);
+                        }
+                    } else if (Array.isArray(post.key)) {
+                        post.key.forEach(function(key){
+                            if (tags.indexOf(key) === -1) {
+                                tags.push(key);
+                            }
+                        });
+                    }
+                }
+            });
+            tags.forEach(function(key) { 
+            %>
+                <button class="filter-btn" data-filter="<%= key %>"><%= key %></button>
+            <% }) %>
         </div>
         <div class="post-list">
             <% var posts = site.posts.sort('date', 'desc'); %>
             <% posts.forEach(post => { %>
-                <div class="post-item">
+                <div class="post-item" data-tags="<%= post.key %>">
+                    <a href="<%- url_for(post.path) %>">
+                        <div class="post-item-title"><%- post.title %></div>
+                    </a>
                     <span class="post-item-key">[ <%- post.key %> ]</span>
                     <span class="post-item-date"><%= date(post.date, 'YYYY/MM/DD') %></span>
-                    <a href="<%- url_for(post.path) %>">
-                        <span class="post-item-title"><%- post.title %></span>
-                    </a>
                     <div class="post-item-abstract"><%- post.abstract %></div>
                 </div>
             <% }) %>

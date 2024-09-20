@@ -17,15 +17,25 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        var nav = document.querySelector('.sticky-nav');
-        var scrollThreshold = 50; // 滚动多少像素后添加背景
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const postItems = document.querySelectorAll('.post-item');
 
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > scrollThreshold) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                postItems.forEach(item => {
+                    const itemTags = item.getAttribute('data-tags').split(',');
+                    if (filter === 'all' || itemTags.includes(filter)) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
         });
     });
 </script>

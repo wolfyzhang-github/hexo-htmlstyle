@@ -3,6 +3,7 @@
     flex-wrap: wrap
     max-width: 640px
     margin: 0 auto
+    padding: 0 20px
 
 .pinned-chapter
     font-size: 22px
@@ -15,7 +16,7 @@
     margin: 20px 0 10px 0
 
 .index-intro
-    font-size: 22px
+    font-size: 30px
     font-weight: bold
     margin: 20px 0 10px 0
 
@@ -25,24 +26,23 @@
 .pinned-item, .post-item
     width: 100%
     text-align: left
-    &:not(:last-child)
-        margin-bottom: 10px
+    margin-bottom: 20px  // 增加底部间距
 
 .pinned-item-key, .post-item-key
-    font-size: 1em
+    font-size: 0.8em
 
 .pinned-item-date, .post-item-date
-    font-size: 0.9em
+    font-size: 0.8em
     color: #444
-    margin-left: 0.5em
+    margin-left: 10px  // 增加与标题的间距
 
-.pinned-item-title, .post-item-title {
-    font-size: 1em;
-    margin-left: 0.4em;
-    color: #0077cc;
-    text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* 平滑过渡效果 */
-}
+.pinned-item-title, .post-item-title
+    font-weight: bold
+    font-size: 1.2em
+    color: #0077cc
+    text-decoration: none
+    transition: color 0.3s ease, text-decoration 0.3s ease
+    margin-bottom: 5px  // 增加标题与日期/摘要的间距
 
 .pinned-item-title:hover, .post-item-title:hover {
     color: #005fa3;
@@ -55,3 +55,22 @@
 
 .main-wrapper
     max-width: 640px
+
+.filter-buttons
+    display: flex
+    flex-wrap: wrap
+    gap: 10px
+    margin-bottom: 20px
+
+.filter-btn
+    padding: 5px 10px
+    border: none
+    background-color: #f0f0f0  // 浅灰色
+    color: #333
+    cursor: pointer
+    transition: all 0.3s ease
+    border-radius: 15px  // 圆角矩形
+
+    &:hover, &.active
+        background-color: #333  // 深深的灰色
+        color: white
