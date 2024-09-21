@@ -24,17 +24,27 @@
             btn.addEventListener('click', function() {
                 const filter = this.getAttribute('data-filter');
                 
-                filterBtns.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-
-                postItems.forEach(item => {
-                    const itemTags = item.getAttribute('data-tags').split(',');
-                    if (filter === 'all' || itemTags.includes(filter)) {
+                if (this.classList.contains('active')) {
+                    // 如果按钮已经是激活状态,则取消激活并显示所有文章
+                    this.classList.remove('active');
+                    postItems.forEach(item => {
                         item.style.display = '';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
+                    });
+                } else {
+                    // 取消其他按钮的激活状态
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    // 激活当前按钮
+                    this.classList.add('active');
+                    // 筛选文章
+                    postItems.forEach(item => {
+                        const itemTags = item.getAttribute('data-tags').split(',');
+                        if (itemTags.includes(filter)) {
+                            item.style.display = '';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                }
             });
         });
     });
