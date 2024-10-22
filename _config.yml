@@ -4,12 +4,12 @@
 
 # Site
 title: ghzhang's blog
-subtitle: ''
-description: 除特殊注明，本站所有内容皆为原创
-keywords:
+find_me: About
+find_me_url: https://blog.wolfyzhang.com/about/
+links: Links
+links_url: https://blog.wolfyzhang.com/links/
 author: wolfyzhang
-language: en
-timezone: ''
+language: zh-CN
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -119,10 +119,6 @@ lazyload:
   isSPA: false # optional
   preloadRatio: 1 # optional, default is 1
 
-minifier:
-  js:
-    enable: true
-  css:
-    enable: true
-  html:
-    enable: true
+all_minifier: false
+
+self_intro: 业务、产品和研发，一个也没整明白；小说倒是翻过几本，没翻到底；代码也写过几行，可写不好

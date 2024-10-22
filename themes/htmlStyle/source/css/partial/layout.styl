@@ -1,12 +1,14 @@
+html
+    overflow-y: scroll
+
 .body-container
     margin: 0 auto
     display: flex
     flex-direction: column
-    align-items: center  // 添加此行以居中子元素
-    max-width: 100%  // 添加这行
-    overflow-x: hidden  // 添加这行
-    & > div:not(:last-child)
-        margin-bottom: 40px
+    align-items: center
+    max-width: calc(640px + (100vw - 100%))
+    overflow-x: hidden
+    padding-left: calc(100vw - 100%)
 
 .main-wrapper, .footer-wrapper
     width: 100%

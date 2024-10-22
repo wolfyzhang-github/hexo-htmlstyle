@@ -1,15 +1,21 @@
 <div class="index-header-wrapper">
     <div class="index-header-container">
         <div class="index-avatar">
-            <img src="/avatar.jpeg" alt="Avatar">
+            <a href="/">
+                <img src="/avatar.jpeg" alt="Avatar">
+            </a>
         </div>
         <div class="index-text-content">
             <div class="index-intro">
                 <%= config.title %>
             </div>
-            <div class="index-description">
-                <%= config.description %>
+            <div class="index-links">
+                <a href="<%= config.find_me_url %>" class="index-link"><%= config.find_me %></a>
+                <a href="<%= config.links_url %>" class="index-link"><%= config.links %></a>
             </div>
         </div>
+    </div>
+    <div class="index-self-intro">
+        <%= config.self_intro %>
     </div>
 </div>

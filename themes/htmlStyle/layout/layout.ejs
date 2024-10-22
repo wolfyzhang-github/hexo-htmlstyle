@@ -30,6 +30,8 @@
                     postItems.forEach(item => {
                         item.style.display = '';
                     });
+                    // 重置所有按钮样式
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
                 } else {
                     // 取消其他按钮的激活状态
                     filterBtns.forEach(btn => btn.classList.remove('active'));
