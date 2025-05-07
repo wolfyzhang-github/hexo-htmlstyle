@@ -37,6 +37,7 @@ analytics:
   renable: true
   gtag: G-P8TPGHN83M
   btag: 814574df4ca5d3c5a44b815c9ad229ef
+  rserver: https://track.wolfyzhang.com
 
 symbols_count_time:
   symbols: true

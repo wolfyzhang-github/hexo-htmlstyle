@@ -26,7 +26,7 @@
 
 <% if (theme.analytics && theme.analytics.renable) { %> 
     <script
-        src="/api/script.js"
+        src="<%= theme.analytics.rserver %>/api/script.js"
         site-id="1"
         defer
     ></script>
