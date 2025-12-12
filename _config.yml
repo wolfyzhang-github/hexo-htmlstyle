@@ -131,6 +131,15 @@ symbols_count_time:
 minify:
   html:
     enable: true
+    collapseBooleanAttributes: true
+    collapseWhitespace: true
+    conservativeCollapse: true  # 保留中英文之间的空格
+    removeComments: true
+    removeEmptyAttributes: true
+    removeScriptTypeAttributes: true
+    removeStyleLinkTypeAttributes: true
+    minifyJS: true
+    minifyCSS: true
   css:
     enable: true
   js:
