@@ -119,6 +119,27 @@ lazyload:
   isSPA: false # optional
   preloadRatio: 1 # optional, default is 1
 
-all_minifier: true
+# hexo-symbols-count-time configuration
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+
+# hexo-yam minifier configuration
+minify:
+  html:
+    enable: true
+  css:
+    enable: true
+  js:
+    enable: true
+  svg:
+    enable: true
+  json:
+    enable: false
+  xml:
+    enable: false
 
 self_intro: 业务、产品和研发，一个也没整明白；小说倒是翻过几本，没翻到底；代码也写过几行，可写不好
