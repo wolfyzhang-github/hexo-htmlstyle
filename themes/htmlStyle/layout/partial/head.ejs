@@ -2,13 +2,58 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="<%= url_for(theme.favicon) %>" type="image/x-icon" />
+
+    <!-- DNS 预解析，加速 Cloudflare Analytics 加载 -->
+    <link rel="dns-prefetch" href="//static.cloudflareinsights.com">
+    <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+
     <title>
         <% if (page.title) { %>
             <%= page.title %> |
-        <% } %> 
+        <% } %>
         <%= config.title %>
     </title>
     <%- css('css/style') %>
-    <%- partial('partial/scripts/analytics.ejs') %>   
+
+    <!-- 优化 Cloudflare Analytics 加载 -->
+    <script>
+    (function() {
+        // 拦截 Cloudflare 自动注入的 beacon 脚本，改为异步加载
+        const originalAppendChild = Element.prototype.appendChild;
+        const originalInsertBefore = Element.prototype.insertBefore;
+
+        function optimizeScript(script) {
+            if (script && script.src && script.src.includes('cloudflareinsights.com')) {
+                // 移除原脚本，改为异步加载
+                script.async = true;
+                script.defer = true;
+                // 在页面完全加载后再执行
+                if (document.readyState === 'complete') {
+                    return script;
+                } else {
+                    window.addEventListener('load', function() {
+                        document.head.appendChild(script);
+                    }, { once: true });
+                    return null; // 阻止立即插入
+                }
+            }
+            return script;
+        }
+
+        Element.prototype.appendChild = function(node) {
+            const optimized = optimizeScript(node);
+            if (optimized === null) return node;
+            return originalAppendChild.call(this, optimized);
+        };
+
+        Element.prototype.insertBefore = function(node, before) {
+            const optimized = optimizeScript(node);
+            if (optimized === null) return node;
+            return originalInsertBefore.call(this, optimized, before);
+        };
+    })();
+    </script>
+
+    <%- partial('partial/scripts/analytics.ejs') %>
     <meta http-equiv="Cache-Control" content="max-age=31536000">
 </head>
