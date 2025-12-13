@@ -35,9 +35,11 @@ analytics:
   genable: true
   benable: true
   renable: true
+  cfenable: true
   gtag: G-P8TPGHN83M
   btag: 814574df4ca5d3c5a44b815c9ad229ef
   rserver: https://track.wolfyzhang.com
+  cfbeacon: c3a6b08322cb414691ce0a53536dfc6e
 
 symbols_count_time:
   symbols: true

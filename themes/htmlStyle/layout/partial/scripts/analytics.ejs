@@ -1,4 +1,4 @@
-<% if (theme.analytics && theme.analytics.genable) { %> 
+<% if (theme.analytics && theme.analytics.genable) { %>
     <% if (theme.analytics.gtag) { %>
         <script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.analytics.gtag %>"></script>
         <script>
@@ -10,24 +10,42 @@
     <% } %>
 <% } %>
 
-<% if (theme.analytics && theme.analytics.benable) { %> 
+<% if (theme.analytics && theme.analytics.benable) { %>
     <% if (theme.analytics.btag) { %>
         <script>
             var _hmt = _hmt || [];
             (function() {
               var hm = document.createElement("script");
               hm.src = "https://hm.baidu.com/hm.js?<%= theme.analytics.btag %>";
-              var s = document.getElementsByTagName("script")[0]; 
+              var s = document.getElementsByTagName("script")[0];
               s.parentNode.insertBefore(hm, s);
             })();
         </script>
     <% } %>
 <% } %>
 
-<% if (theme.analytics && theme.analytics.renable) { %> 
+<% if (theme.analytics && theme.analytics.renable) { %>
     <script
         src="<%= theme.analytics.rserver %>/api/script.js"
         site-id="1"
         defer
     ></script>
+<% } %>
+
+<% if (theme.analytics && theme.analytics.cfenable) { %>
+    <% if (theme.analytics.cfbeacon) { %>
+        <!-- Cloudflare Web Analytics - 完全异步加载，不阻塞页面 -->
+        <script>
+            // 在页面完全加载后才加载 Cloudflare Analytics
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    var script = document.createElement('script');
+                    script.defer = true;
+                    script.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+                    script.setAttribute('data-cf-beacon', '{"token": "<%= theme.analytics.cfbeacon %>"}');
+                    document.body.appendChild(script);
+                }, 1000); // 延迟 1 秒加载，确保页面完全渲染
+            });
+        </script>
+    <% } %>
 <% } %>
